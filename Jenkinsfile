@@ -43,7 +43,7 @@ pipeline {
                         rm -rf .terraform
 
                         terraform init -reconfigure \
-                            -backend-config="bucket=terraform-ha-infra-state-file" \
+                            -backend-config="bucket=terraform-ha-infra-state" \
                             -backend-config="key=infrastructure/terraform.tfstate" \
                             -backend-config="region=us-east-1" \
                             -backend-config="encrypt=true" \
